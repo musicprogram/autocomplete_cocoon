@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @sheet.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @sheet.descripcion %>
+</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Material</th>
+			<th>Cantidád</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @sheet.material_sheets.each do |material_sheet| %>
+		<tr>
+			<td><%= material_sheet.material_id rescue nil %></td>
+			<td><%= material_sheet.cantidad %></td>
+		</tr>
+	<% end %>	
+	</tbody>
+</table>
+
+	
+	
+
+
+<%= link_to 'Edit', edit_sheet_path(@sheet) %> |
+<%= link_to 'Back', sheets_path %>

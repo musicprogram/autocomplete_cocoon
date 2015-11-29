@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Material Sheets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Material</th>
+      <th>Cantidad</th>
+      <th>Sheet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @material_sheets.each do |material_sheet| %>
+      <tr>
+        <td><%= material_sheet.material_id %></td>
+        <td><%= material_sheet.cantidad %></td>
+        <td><%= material_sheet.sheet %></td>
+        <td><%= link_to 'Show', material_sheet %></td>
+        <td><%= link_to 'Edit', edit_material_sheet_path(material_sheet) %></td>
+        <td><%= link_to 'Destroy', material_sheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Material sheet', new_material_sheet_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @material_sheet.material_id %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @material_sheet.cantidad %>
+</p>
+
+<p>
+  <strong>Sheet:</strong>
+  <%= @material_sheet.sheet %>
+</p>
+
+<%= link_to 'Edit', edit_material_sheet_path(@material_sheet) %> |
+<%= link_to 'Back', material_sheets_path %>

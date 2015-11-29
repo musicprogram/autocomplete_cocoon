@@ -1,0 +1,28 @@
+<%= form_for(@material_sheet) do |f| %>
+  <% if @material_sheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@material_sheet.errors.count, "error") %> prohibited this material_sheet from being saved:</h2>
+
+      <ul>
+      <% @material_sheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :material_id %><br>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad %><br>
+    <%= f.number_field :cantidad %>
+  </div>
+  <div class="field">
+    <%= f.label :sheet_id %><br>
+    <%= f.text_field :sheet_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

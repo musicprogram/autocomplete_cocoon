@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  material_id: MyString
+  cantidad: 1
+  sheet_id: 
+
+two:
+  material_id: MyString
+  cantidad: 1
+  sheet_id: 

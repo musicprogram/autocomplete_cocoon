@@ -1,0 +1,11 @@
+<div class="nested-fields well">
+	<div class="field">
+		<%= f.label :material_id, 'Material' %><br>
+		<%=f.autocomplete_field :material_id, autocomplete_material_nombre_material_sheets_path, :placeholder => "Nombre..." %>
+	</div>
+	<div class="field">
+		<%= f.label :cantidad %><br>
+		<%= f.text_field :cantidad %>
+	</div>
+	<%= link_to_remove_association 'Eliminar', f %>
+</div>
